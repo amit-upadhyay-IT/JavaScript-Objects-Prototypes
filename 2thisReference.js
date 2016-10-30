@@ -44,10 +44,24 @@ function foo3()
 new foo3(); // Method # 3
 
 /*
- * calling standalone function using 'new' keyword this reference points to
+ * calling standalone function using 'new' keyword 'this' reference points to
  * the newly created object
  * */
 
+function foo4(){
+    this.name = "amit";
+    console.log("Hello 4");
+    console.log(this);
+}
+
+foo4.call({"age":20}); // Method # 4
+/*
+ * foo.call() is same as foo(), so why do we need to use the call property?
+ * The reason is that call() takes an argument which is an object, now what
+ * does passing an object to the call property do?
+ * It takes this object and binds this object to whatever you pass inside
+ * the call()
+ * */
 
 /*
  * There are two default arguments to every function call : argument and this
