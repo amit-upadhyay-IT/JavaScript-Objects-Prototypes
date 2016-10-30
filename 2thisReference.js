@@ -35,7 +35,19 @@ obj.foo(); // Method # 2
  * then this reference is actually referring to that object itself.
  * */
 
-new foo(); // Method # 3
+function foo3()
+{
+     console.log("Hello 3");
+     console.log(this);
+}
+
+new foo3(); // Method # 3
+
+/*
+ * calling standalone function using 'new' keyword this reference points to
+ * the newly created object
+ * */
+
 
 /*
  * There are two default arguments to every function call : argument and this
